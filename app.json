@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "plugins": [
+      "expo-router"
+    ],
+    "name": "RBG_Game",
+    "slug": "RBG_Game"
+  }
+}
