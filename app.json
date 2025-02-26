@@ -1,6 +1,7 @@
 {
   "expo": {
     "scheme": "acme",
+    "newArchEnabled": true,
     "plugins": [
       "expo-router"
     ],
