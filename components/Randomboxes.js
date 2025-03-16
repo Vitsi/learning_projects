@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, Alert } from "react-native";
 import gamestyles from "../styles/game.style";
-import LanguageSelector from "./Lang"; 
+import LanguageSelector from "./Lang";
+import { useRouter } from "expo-router";
 
 const translations = {
     en: { 
@@ -46,6 +47,7 @@ const RandomBoxes = () => {
   const [message, setMessage] = useState("");
   const [mode, setMode] = useState("easy");
   const [language, setLanguage] = useState("en");
+  const router = useRouter();
 
   // randomizing each color
   const getRandomRGB = () => {
@@ -118,7 +120,7 @@ const RandomBoxes = () => {
 
 
       <Text style={[gamestyles.message]}>{message}</Text>
-
+      <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
       <TouchableOpacity style={gamestyles.newgamebtn} onPress={resetGame}>
         {message === translations[language].correct ? (
           <Text style={gamestyles.modeText}>{translations[language].playagain}</Text>
@@ -126,6 +128,11 @@ const RandomBoxes = () => {
           <Text style={gamestyles.modeText}>{translations[language].newGame}</Text>
         )}
       </TouchableOpacity>
+      <TouchableOpacity style={gamestyles.newgamebtn}  >
+        <Text style={gamestyles.modeText} 
+        onPress={()=>router.push('/listofUsers')} > Finish Game </Text>
+      </TouchableOpacity>
+      </View>
     </View>
   );
 };

@@ -76,6 +76,9 @@ const gamestyles = StyleSheet.create({
     fontWeight: "bold",
     marginTop: 20,
   },
+  finishGameBtn : {
+    
+  }
 });
 
 export { COLORS };
