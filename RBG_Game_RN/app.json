@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-router"
+    ],
+    "name": "RBG_Game",
+    "slug": "RBG_Game"
+  }
+}
